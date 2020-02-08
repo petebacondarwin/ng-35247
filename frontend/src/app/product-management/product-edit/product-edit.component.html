@@ -1,0 +1,18 @@
+<form #form="ngForm" class="productform">
+  <nb-tabset>
+
+    <nb-tab tabTitle="Descriptive Details" active="true">
+
+      <app-descriptive-detail [descriptiveDetail]="product.descriptiveDetail" *ngIf="product"></app-descriptive-detail>
+<!--      <app-title-detail formControlName="titleDetail"></app-title-detail>-->
+
+    </nb-tab>
+
+  </nb-tabset>
+</form>
+<div class="row">
+  <div class=" col-md-9">
+    <button outline [disabled]="saveDisabled()"  nbButton status="primary" (click)="save()">Save</button>
+  </div>
+</div>
+

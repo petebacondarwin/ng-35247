@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+// Import the ag-Grid material-next theme
+//@import '~ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material';
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/bootstrap/styles/globals';
+@import '~@nebular/auth/styles/all';
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-auth-global();
+  @include nb-bootstrap-global();
+}
+
+;
+
+
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "./scss/ag-theme-nebular";
+
+#grid-container {
+  width: 100%;
+  margin: 24px;
+}
+
+.ag-center-cols-viewport {
+  background-color: white;
+}
+
+.layout-container {
+  overflow: hidden;
+}
+
+.productform {
+
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.form-group {
+    margin-bottom: 0.5rem;
+  }
+
+  p.danger {
+    color: nb-theme(color-danger-default);
+  }
+
+
+  nb-card-header {
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+
+    nb-icon {
+      font-size: 0.75rem;
+      margin-left: 16px;
+      margin-top: -3px;
+
+    }
+
+    line-height: 0.8rem;
+    font-size: 0.75rem;
+
+    button {
+      margin-left: 1rem;
+    }
+
+    margin-bottom: 8px;
+  }
+
+  nb-card-body {
+    overflow: hidden;
+    padding: 0.5rem 0;
+    padding: 0;
+
+  }
+
+  nb-card {
+    box-shadow: none;
+  }
+
+  nb-card-footer {
+    padding: 0.25rem 0.25rem;
+  }
+
+  nb-tab.content-active {
+    padding: 0.25rem 0.25rem;
+    overflow: hidden;
+  }
+
+  nb-card-body {
+    padding: 0.5rem 0.8rem;
+  }
+
+  nb-card {
+    margin-bottom: 0.5rem;
+  }
+
+  .form-grid-2 {
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: 50% 50%;
+  }
+
+  .form-element {
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: auto 24px;
+  }
+
+
+}
+
+//.nb-theme-eiswind nb-layout .layout .layout-container .content .columns nb-layout-column.nomargin {
+//  padding: 0 0 0 0;
+//}
+

@@ -1,0 +1,8 @@
+.idea
+*.iml
+frontend/node_modules
+frontend/src/styles.css
+frontend/src/reports
+integration-test/node_modules
+integration-test/cypress/results
+frontendclient/target/generated-sources/openapi/node_modules

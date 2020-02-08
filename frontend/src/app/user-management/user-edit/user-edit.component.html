@@ -1,0 +1,23 @@
+<nb-card status="success" class="userform">
+  <nb-card-header>Edit User</nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="form">
+      <div class="user-container">
+
+        <input nbInput placeholder="Email" name="email" formControlName="email" readonly>
+
+        <input nbInput placeholder="Firstname" name="firstName" formControlName="firstName">
+
+        <input nbInput placeholder="Lastname" name="lastName" formControlName="lastName">
+
+        <nb-checkbox name="active" formControlName="active">Active</nb-checkbox>
+
+        <nb-select multiple placeholder="Roles" formControlName="permissions">
+          <nb-option *ngFor="let role of roles" [value]="role">{{role}}</nb-option>
+        </nb-select>
+      </div>
+      <button nbButton outline type="submit" [disabled]="!form.valid" (click)="save()">Save</button>
+    </form>
+  </nb-card-body>
+
+</nb-card>

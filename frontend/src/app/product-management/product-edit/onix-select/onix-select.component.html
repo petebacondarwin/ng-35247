@@ -1,0 +1,12 @@
+<nb-select [(selected)]="selectedItem"  fullWidth >
+  <nb-select-label>
+    {{ selectedItem!=null ? selectedItem.text :"Please select a value" }}
+  </nb-select-label>
+
+  <nb-option *ngFor="let code of (codeList | async)" [value]="code">
+    <div class="onix-option">
+    <div>{{code.text}}</div><div><small>{{code.description}}</small></div>
+    </div>
+  </nb-option>
+  <nb-option>Deselect Value</nb-option>
+</nb-select>

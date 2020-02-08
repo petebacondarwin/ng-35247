@@ -1,0 +1,10 @@
+<nb-card status="danger">
+  <nb-card-header>Communication error!</nb-card-header>
+  <nb-card-body>
+    <h3>Statuscode: {{status}}</h3>
+    <p>{{reason}}</p>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton status="success" (click)="submit()">Dismiss</button>
+  </nb-card-footer>
+</nb-card>

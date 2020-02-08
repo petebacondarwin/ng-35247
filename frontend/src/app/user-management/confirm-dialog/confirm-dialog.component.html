@@ -1,0 +1,11 @@
+<nb-card status="success">
+  <nb-card-header>Are you sure?</nb-card-header>
+  <nb-card-body>
+    <p>Really delete this user?</p>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton outline status="danger" (click)="cancel()">Cancel</button>
+    <button nbButton outline status="success" (click)="submit()">Delete</button>
+  </nb-card-footer>
+</nb-card>
+

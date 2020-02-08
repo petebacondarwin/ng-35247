@@ -1,0 +1,37 @@
+<nb-card status="success" class="userform">
+  <nb-card-header>Create New User</nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="form">
+      <div class="user-container">
+
+        <input nbInput placeholder="Email" name="email" formControlName="email"
+               [status]="(email.invalid && (email.dirty || email.touched))?'danger':'basic'">
+        <p class="danger" *ngIf="email.errors?.email && (email.dirty || email.touched)">Must be a valid email!</p>
+        <p class="danger" *ngIf="email.errors?.userExists">User already exists!</p>
+
+
+        <input nbInput placeholder="Firstname" name="firstName" formControlName="firstName">
+
+        <input nbInput placeholder="Lastname" name="lastName" formControlName="lastName">
+
+        <nb-checkbox name="active" formControlName="active">Active</nb-checkbox>
+
+        <input nbInput type="password" placeholder="Password" name="password" formControlName="password"
+               [status]="(password.invalid && (password.dirty || password.touched))?'danger':'basic'">
+        <p class="danger" *ngIf="password.invalid && (password.dirty || password.touched)">Must be at least 8 chars!</p>
+
+        <input nbInput type="password" placeholder="Confirm Password" name="passwordConfirm" formControlName="passwordConfirm"
+               [status]="(form.errors?.passwordMustMatch && (form.dirty || form.touched))?'danger':'basic'">
+        <p class="danger" *ngIf="form.errors?.passwordMustMatch && (form.dirty || form.touched)">Password must match!</p>
+
+        <nb-select multiple placeholder="Roles" formControlName="permissions">
+          <nb-option *ngFor="let role of roles" [value]="role">{{role}}</nb-option>
+        </nb-select>
+      </div>
+      <button nbButton outline type="submit" [disabled]="!form.valid" (click)="save()">Save</button>
+
+
+    </form>
+  </nb-card-body>
+
+</nb-card>

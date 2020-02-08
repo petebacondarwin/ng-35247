@@ -1,0 +1,10 @@
+<div class="form-group row" [formGroup]="form">
+  <label class="col-md-3 col-form-label">{{label}}</label>
+  <div class="col-md-9">
+    <input #inputElement class="form-control" shape="rectangle" fullWidth fieldSize="tiny"
+           nbInput  name="input" formControlName="input" [status]="input.invalid?'danger':'basic'" >
+  </div>
+  <div class="offset-md-3 col-md-9" *ngIf="input.invalid && (input.dirty || input.touched)">
+       {{label}} is required.
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>angular-proto-nebular</artifactId>
+        <groupId>de.eiswind</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>frontendclient</artifactId>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>4.2.3</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/../backend-service/target/swagger/swagger.yaml</inputSpec>
+                            <generatorName>typescript-angular</generatorName>
+
+                            <configOptions>
+                                <sourceFolder>src/gen/api</sourceFolder>
+
+                            </configOptions>
+                            <additionalProperties>
+                                <additionalProperty>npmRepository=https://nexus.eiswind.de</additionalProperty>
+                                <additionalProperty>ngVersion=9.0.0</additionalProperty>
+                                <additionalProperty>npmName=@eiswind/proto-client-api</additionalProperty>
+                                <additionalProperty>npmVersion=0.0.1</additionalProperty>
+                                <additionalProperty>snapshot=true</additionalProperty>
+                            </additionalProperties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <executions>
+            <execution>
+                <id>npm-install</id>
+                <phase>generate-resources</phase>
+                <goals>
+                    <goal>exec</goal>
+                </goals>
+                <configuration>
+                    <async>false</async>
+                    <executable>npm</executable>
+                    <workingDirectory>${project.build.directory}/generated-sources/openapi</workingDirectory>
+                    <arguments>
+                        <argument>install</argument>
+                    </arguments>
+                    <outputFile>${project.build.directory}/swagger/install.log</outputFile>
+                </configuration>
+            </execution>
+                <execution>
+                    <id>npm-build</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                        <async>false</async>
+                        <executable>npm</executable>
+                        <workingDirectory>${project.build.directory}/generated-sources/openapi</workingDirectory>
+                        <arguments>
+                            <argument>run</argument>
+                            <argument>build</argument>
+                        </arguments>
+                        <outputFile>${project.build.directory}/swagger/build.log</outputFile>
+                    </configuration>
+                </execution>
+            </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>openapi</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

@@ -1,0 +1,24 @@
+<div ngModelGroup="descriptiveDetail">
+  <div class="form-grid-2">
+    <div class="form-element">
+      <div>
+        <label>Produktform</label>
+        <app-onix-select codeListName="List150"
+                         [(ngModel)]="descriptiveDetail.productForm"
+                         name="productForm">
+        </app-onix-select>
+      </div>
+    </div>
+    <div class="form-element">
+      <div >
+        <label>Produktzusammensetzung</label>
+        <app-onix-select codeListName="List2"
+
+                         [(ngModel)]="descriptiveDetail.productComposition"
+                         name="productForm">
+        </app-onix-select>
+      </div>
+    </div>
+  </div>
+  <app-title-detail *ngFor="let detail of descriptiveDetail.titleDetails" [titleDetail]="detail"></app-title-detail>
+</div>

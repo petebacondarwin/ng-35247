@@ -1,0 +1,33 @@
+<nb-card status="success" class="login-card">
+  <nb-card-header>
+    <span>Users</span>
+  </nb-card-header>
+  <nb-card-body>
+    <ag-grid-angular domLayout='autoHeight'
+                     class="ag-theme-nebular"
+                     [rowData]="users | async"
+                     [columnDefs]="columnDefs"
+                     (selectionChanged)='onSelectionChanged($event)'
+                     rowSelection="single"
+                     rowDeselection="true"
+    >
+    </ag-grid-angular>
+  </nb-card-body>
+  <nb-card-footer>
+    <div class="button-container">
+      <button nbButton name="create" outline routerLink="/user/create">
+        <nb-icon name="create" icon="navigate_plus"></nb-icon>
+      </button>
+    </div>
+    <div class="button-container">
+      <button nbButton name="edit" outline (click)="edit()" [disabled]="selectedUser==null" >
+        <nb-icon name="edit" icon="pencil"></nb-icon>
+      </button>
+    </div>
+    <div class="button-container">
+      <button nbButton name="delete" outline (click)="delete()" [disabled]="selectedUser==null" >
+        <nb-icon name="delete" icon="navigate_minus"></nb-icon>
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,26 @@
+<nb-card status="success" class="password-card">
+  <nb-card-header>
+    <span>User Profile</span>
+  </nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="form">
+      <div class="user-container">
+        <p class="danger" *ngIf="statusText.length>0">{{statusText}}</p>
+
+      <input nbInput type="password" placeholder="Current Password" name="passwordOld" formControlName="passwordOld"
+             [status]="(passwordOld.invalid && (passwordOld.dirty || passwordOld.touched))?'danger':'basic'">
+        <p class="danger" *ngIf="passwordOld.invalid && (passwordOld.dirty || passwordOld.touched)">Must be at least 8 chars!</p>
+
+      <input nbInput type="password" placeholder="New Password" name="password" formControlName="password"
+             [status]="(password.invalid && (password.dirty || password.touched))?'danger':'basic'">
+      <p class="danger" *ngIf="password.invalid && (password.dirty || password.touched)">Must be at least 8 chars!</p>
+
+      <input nbInput type="password" placeholder="Confirm Password" name="passwordConfirm"
+             formControlName="passwordConfirm"
+             [status]="(form.errors?.passwordMustMatch && (form.dirty || form.touched))?'danger':'basic'">
+      <p class="danger" *ngIf="form.errors?.passwordMustMatch && (form.dirty || form.touched)">Password must match!</p>
+      </div>
+      <button nbButton outline type="submit" [disabled]="!form.valid" (click)="update()">Save</button>
+    </form>
+  </nb-card-body>
+</nb-card>

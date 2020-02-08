@@ -1,0 +1,6 @@
+
+> frontend@0.0.0 sass /home/thomas/projects/eiswind/angular-proto-nebular/frontend
+> node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/styles.scss src/styles.css
+
+Rendering Complete, saving .css file...
+Wrote CSS to /home/thomas/projects/eiswind/angular-proto-nebular/frontend/src/styles.css

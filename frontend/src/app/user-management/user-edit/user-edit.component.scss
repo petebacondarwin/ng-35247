@@ -1,0 +1,17 @@
+@import '../../../themes';
+
+.userform {
+  input, nb-checkbox, button, nb-select {
+    margin-top: 10px;
+  }
+
+  .user-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p.danger {
+    color: nb-theme(color-danger-default) ;
+  }
+}
+

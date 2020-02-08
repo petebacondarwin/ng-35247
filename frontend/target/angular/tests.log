@@ -1,0 +1,111 @@
+
+Compiling @angular/core : es2015 as esm2015
+
+Compiling @angular/core/testing : es2015 as esm2015
+
+Compiling @angular/common : es2015 as esm2015
+
+Compiling @angular/platform-browser : es2015 as esm2015
+
+Compiling @angular/platform-browser-dynamic : es2015 as esm2015
+
+Compiling @angular/platform-browser/testing : es2015 as esm2015
+
+Compiling @angular/compiler/testing : es2015 as esm2015
+
+Compiling @angular/platform-browser-dynamic/testing : es2015 as esm2015
+
+Compiling @angular/common/testing : es2015 as esm2015
+
+Compiling @angular/router : es2015 as esm2015
+
+Compiling @angular/router/testing : es2015 as esm2015
+
+Compiling @angular/forms : es2015 as esm2015
+
+Compiling @angular/cdk/keycodes : es2015 as esm2015
+
+Compiling @angular/cdk/platform : es2015 as esm2015
+
+Compiling @angular/cdk/observers : es2015 as esm2015
+
+Compiling @angular/cdk/a11y : es2015 as esm2015
+
+Compiling @angular/cdk/portal : es2015 as esm2015
+
+Compiling @angular/cdk/bidi : es2015 as esm2015
+
+Compiling @angular/cdk/collections : es2015 as esm2015
+
+Compiling @angular/cdk/scrolling : es2015 as esm2015
+
+Compiling @angular/cdk/overlay : es2015 as esm2015
+
+Compiling @angular/animations : es2015 as esm2015
+
+Compiling @angular/cdk/table : es2015 as esm2015
+
+Compiling @nebular/theme : es2015 as esm2015
+
+Compiling @angular/common/http : es2015 as esm2015
+
+Compiling @angular/common/http/testing : es2015 as esm2015
+
+Compiling @angular/animations/browser : es2015 as esm2015
+
+Compiling @angular/platform-browser/animations : es2015 as esm2015
+
+Compiling @nebular/auth : es2015 as esm2015
+
+Compiling @angular/core : es2015 as esm2015
+
+Compiling @angular/common : es2015 as esm2015
+
+Compiling @angular/common/http : es2015 as esm2015
+
+Compiling @eiswind/proto-client-api : es2015 as esm2015
+
+Compiling @nebular/security : es2015 as esm2015
+
+Compiling ag-grid-angular : main as commonjs
+[32m08 02 2020 11:06:19.035:INFO [karma-server]: [39mKarma v4.4.1 server started at http://0.0.0.0:9876/
+[32m08 02 2020 11:06:19.037:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[32m08 02 2020 11:06:19.040:INFO [launcher]: [39mStarting browser Chrome
+[32m08 02 2020 11:06:29.266:INFO [HeadlessChrome 79.0.3945 (Ubuntu 0.0.0)]: [39mConnected on socket rudp5gAE4299qGVDAAAA with id 16716143
+HeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 0 of 8 SUCCESS (0 secs / 0 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 1 of 8 SUCCESS (0 secs / 0.053 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 2 of 8 SUCCESS (0 secs / 0.063 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 3 of 8 SUCCESS (0 secs / 0.076 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 4 of 8 SUCCESS (0 secs / 0.081 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 5 of 8 SUCCESS (0 secs / 0.086 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 6 of 8 SUCCESS (0 secs / 0.092 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 7 of 8 SUCCESS (0 secs / 0.102 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 8 of 8 SUCCESS (0 secs / 0.112 secs)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0) ERROR
+  An error was thrown in afterAll
+  Error: Type CommonModule does not have 'ngModuleDef' property.
+      at getNgModuleDef (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1827:1)
+      at Object.toString (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1621:1)
+      at noSideEffects (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1369:1)
+      at Module.ɵɵsetNgModuleScope (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1616:26)
+      at http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js:8531:92
+      at Module.../frontend-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js:8577:28)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack/bootstrap:79:1)
+      at Module.../frontend-client/target/generated-sources/openapi/node_modules/@angular/common/http/fesm2015/http.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/http/fesm2015/http.js:1:1)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack/bootstrap:79:1)
+      at Module.../frontend-client/target/generated-sources/openapi/dist/__ivy_ngcc__/fesm2015/eiswind-proto-client-api.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/dist/__ivy_ngcc__/fesm2015/eiswind-proto-client-api.js:1:1)
+HeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 8 of 8 ERROR (0 secs / 0.112 secs)
+HeadlessChrome 79.0.3945 (Ubuntu 0.0.0) ERROR
+  An error was thrown in afterAll
+  Error: Type CommonModule does not have 'ngModuleDef' property.
+      at getNgModuleDef (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1827:1)
+      at Object.toString (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1621:1)
+      at noSideEffects (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1369:1)
+      at Module.ɵɵsetNgModuleScope (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1616:26)
+      at http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js:8531:92
+      at Module.../frontend-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js:8577:28)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack/bootstrap:79:1)
+      at Module.../frontend-client/target/generated-sources/openapi/node_modules/@angular/common/http/fesm2015/http.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/node_modules/@angular/common/http/fesm2015/http.js:1:1)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack/bootstrap:79:1)
+      at Module.../frontend-client/target/generated-sources/openapi/dist/__ivy_ngcc__/fesm2015/eiswind-proto-client-api.js (http://localhost:9876/_karma_webpack_/.-client/target/generated-sources/openapi/dist/__ivy_ngcc__/fesm2015/eiswind-proto-client-api.js:1:1)
+[1A[2KHeadlessChrome 79.0.3945 (Ubuntu 0.0.0): Executed 8 of 8 ERROR (0.147 secs / 0.112 secs)

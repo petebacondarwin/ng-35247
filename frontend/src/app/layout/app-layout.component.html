@@ -1,0 +1,30 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <div class="logo">
+      Proto Nebular
+    </div>
+    <div class="filler"></div>
+    <div class="header-container">
+      <nb-actions
+        size="medium"
+        [class.right]="'normal'">
+        <nb-action>
+          <div  [nbContextMenu]="onixProfileMenu" nbContextMenuTag="onixprofile" >{{profileLabel}} Onix Profile</div>
+        </nb-action>
+        <nb-action class="user" >
+          <nb-user [nbContextMenu]="userMenu" [name]="user?.firstName +' '+ user?.lastName" [picture]="" ></nb-user>
+        </nb-action>
+
+      </nb-actions>
+    </div>
+
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <app-sidebarmenu></app-sidebarmenu>
+  </nb-sidebar>
+
+  <nb-layout-column class="nomargin">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
