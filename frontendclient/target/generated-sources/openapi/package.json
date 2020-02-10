@@ -9,7 +9,8 @@
   ],
   "license": "Unlicense",
   "scripts": {
-    "build": "ng-packagr -p ng-package.json"
+    "build": "ng-packagr -p ng-package.json",
+    "postbuild": "cd dist && npm pack"
   },
   "peerDependencies": {
     "@angular/core": "^9.0.0",
