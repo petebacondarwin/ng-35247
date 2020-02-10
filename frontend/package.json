@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
     "@auth0/angular-jwt": "^2.1.2",
-    "@eiswind/proto-client-api": "../frontendclient/target/generated-sources/openapi/",
+    "@eiswind/proto-client-api": "../frontendclient/target/generated-sources/openapi/dist/eiswind-proto-client-api-0.0.1-SNAPSHOT.202002081131.tgz",
     "@nebular/auth": "^4.6.0",
     "@nebular/bootstrap": "^4.6.0",
     "@nebular/security": "^4.6.0",
